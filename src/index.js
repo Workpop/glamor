@@ -168,9 +168,6 @@ function selector(id, path) {
       : `.css-${id}${x}`)
     .join(',')
 
-  if(canSimulate && /^\&\:/.exec(path) && !/\s/.exec(path)) {
-    x += `,.css-${id}[data-simulate-${simple(path)}],[data-simulate-${simple(path)}]`
-  }
   return x
 
 }
